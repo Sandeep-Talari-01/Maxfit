@@ -1,10 +1,10 @@
 @isTest
 public class EventAttendeeTriggerTest {
-	
-    @testSetup
-    public static void setupData(){
-        
-        Event_Organizer__c  org = new Event_Organizer__c (
+
+@testSetup
+public static void setupData()
+{
+Event_Organizer__c  org = new Event_Organizer__c (
             Name = 'Amit Singh',
             Phone__c = '9807654321',
             Email__c = 'sfdcpanther@gmail.com.dev1',
