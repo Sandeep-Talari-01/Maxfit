@@ -4,14 +4,7 @@ public class DeleteEventBatch implements Database.Batchable<sObject> {
         String Query = 'Select Id, Name From Event__c Where Live__c = true AND End_Date_Time__c < LAST_N_MONTHS:2';
         return Database.getQueryLocator(Query);
     }
-    
-    /*
-     * 201
-     * 
-     * Exe - 200
-     * Exe - 1
-     */ 
-    public void execute(Database.BatchableContext batchContext, List<Event__c> eventList ){
+public void execute(Database.BatchableContext batchContext, List<Event__c> eventList ){
         if(!eventList.isEmpty()){
             List<Database.DeleteResult> deleteResult = Database.delete(eventList);
             for(Database.DeleteResult dr : deleteResult){
