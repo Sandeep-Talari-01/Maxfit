@@ -1,6 +1,6 @@
 public class EventAttendeeTriggerHandler {
-    
-    public static void sendConfirmationEmail(List<Event_Attendee__c> newRecordList ) {
+
+public static void sendConfirmationEmail(List<Event_Attendee__c> newRecordList ) {
         
         Set<Id> attendeesIdsSet = new Set<Id>();
         Set<Id> eventIdsSet = new Set<Id>();
